@@ -20,13 +20,15 @@ export default function FilterContainer({filters, handleClick, isFilterListShown
         } return elements
     }
 
-    function handleFilterListToggle() {
+    function handleFilterListToggle(event) {
+        if (event.key === 'Enter' || event.type === 'click') {
         setIsFilterListShown(!isFilterListShown)
+        }
     }
-
+    
     return (
         <div className="filter-container">
-            <div tabIndex={0} onClick={handleFilterListToggle} className="filter-container-icon">
+            <div tabIndex={0} onClick={(event) => handleFilterListToggle} onKeyDown={event => handleFilterListToggle} className="filter-container-icon">
                 {createIconElements()}
             </div>
             <ul className={`all-filters-list ${isFilterListShown ? '' : 'hidden'}`} >
