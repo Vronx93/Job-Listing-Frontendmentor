@@ -28,7 +28,7 @@ export default function FilterContainer({filters, handleClick, isFilterListShown
     
     return (
         <div className="filter-container">
-            <div tabIndex={0} onClick={(event) => handleFilterListToggle} onKeyDown={event => handleFilterListToggle} className="filter-container-icon">
+            <div tabIndex={0} onClick={(event) => handleFilterListToggle(event)} onKeyDown={(event) => handleFilterListToggle(event)} className="filter-container-icon">
                 {createIconElements()}
             </div>
             <ul className={`all-filters-list ${isFilterListShown ? '' : 'hidden'}`} >
