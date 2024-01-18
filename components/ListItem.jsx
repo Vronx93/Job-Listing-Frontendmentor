@@ -21,7 +21,7 @@ export default function ListItem(props) {
                     <img className="job-list-company-logo" src={props.logo} alt={`Logo of ${props.company} company`}></img>
                     <div>
                         <h1 className="company-name">{props.company}{props.isNew && <span className="new-item">NEW!</span>}{props.isFeatured && <span className="featured-item">FEATURED</span>}</h1>
-                        <h2 className="job-title">{props.title}</h2>
+                        <h2 tabIndex={0} className="job-title">{props.title}</h2>
                         <p className="job-list-p">{props.postedAt}<span className="bullet-job-p">&bull;</span>{props.contractType}<span className="bullet-job-p">&bull;</span>{props.location}</p>
                     </div>
                 </div>

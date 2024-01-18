@@ -1,7 +1,11 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import ReactRefresh from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default {
+  plugins: [ReactRefresh()],
+  jsx: 'react', // Explicitly set the JSX option to 'react'
+  build: {
+    outDir: 'dist',
+  },
+};

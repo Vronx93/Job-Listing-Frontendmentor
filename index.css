@@ -13,7 +13,7 @@
     /* Background */
     --Lighter-Grayish-Cyan: hsl(180, 52%, 96%);
     /* Filter Tablets */
-    --Light-Grayish-Cyan: #7ed6d214;
+    --Light-Grayish-Cyan: hsl(180, 31%, 95%);
     --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
     --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
 
